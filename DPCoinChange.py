@@ -9,3 +9,13 @@ class Solution:
                     dp[a] = min(dp[a], 1 + dp[a - c])
         
         return dp[amount] if dp[amount] != amount + 1 else -1
+
+if __name__ == "__main__":
+    coins = [1, 2, 5]
+    amount = 11
+    solution = Solution()
+    result = solution.coinChange(coins, amount)
+    print(f"Minimum coins needed: {result}")
+
+
+
